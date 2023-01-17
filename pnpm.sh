@@ -2,7 +2,7 @@
 
 
 rm -rf node_modules
-pnpm install
+pnpm install --no-frozen-lockfile
 pnpm lint:types
 
 
