@@ -3,6 +3,8 @@
 
 rm -rf node_modules
 yarn install
-yarn lint:types
+yarn glint --build --clean
+yarn tsc --build --clean
+yarn lint:types --force
 
 

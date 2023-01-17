@@ -75,7 +75,7 @@
     // actually import from them AND the package in question doesn't bring its
     // own types. You  may wish to override this e.g. with `"types": ["node"]`
     // if your project has build-time elements that use NodeJS APIs.
-    // "types": []
+    "types": []
   },
   "glint": {
     "environment": "ember-loose"
