@@ -1,0 +1,25 @@
+name: 'Wat'
+on: 
+  pull_request: null
+  push: 
+    branches:
+      - main
+
+
+jobs:
+  test:
+    name: 'Test ${{ matrix.manager }}'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        manager:
+          - npm
+          - yarn
+          - pnpm
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: ./${{ matrix.manager }}.sh
