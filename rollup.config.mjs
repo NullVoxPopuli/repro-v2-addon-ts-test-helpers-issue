@@ -30,16 +30,8 @@ export default {
     // compile TypeScript to latest JavaScript, including Babel transpilation
     typescript({
       transpiler: 'babel',
-      browserslist: ['last 2 firefox versions', 'last 2 chrome versions'],
-      tsconfig: {
-        fileName: 'tsconfig.json',
-        hook: (config) => ({
-          ...config,
-          declaration: true,
-          declarationMap: true,
-          noEmitOnError: false,
-        }),
-      },
+      browserslist: false,
+      transpileOnly: false,
     }),
 
     // Ensure that standalone .hbs files are properly integrated as Javascript.
